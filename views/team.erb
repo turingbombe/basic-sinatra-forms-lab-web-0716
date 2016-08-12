@@ -5,7 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
+  <!-- <h1>Team Name: <%= params[:name]%></h1>  -->
+  <% params.each_pair do |key, var|%>
+    <% @title = @print_converter.fetch(key.to_sym) %>
+    <h1><%="#{@title}: #{var}"%></h1>
+  <%end%>
+
 
 
  </body>
